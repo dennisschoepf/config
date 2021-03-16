@@ -44,6 +44,7 @@ alias ls="ls -l"
 alias ll="exa -l --color=always --group-directories-first"
 alias la="exa -al --color=always --group-directories-first"
 alias android-studio="/opt/android-studio/bin/studio.sh"
+alias cat="bat"
 
 # Vim Mode
 bindkey -v
