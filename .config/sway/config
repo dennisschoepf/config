@@ -26,6 +26,8 @@ bindsym $mod+Escape exec $HOME/.config/rofi/powermenu.sh
 exec_always --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec_always --no-startup-id mako
 exec_always --no-startup-id batsignal
+exec_always --no-startup-id usr/bin/dropbox
+exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id thunar --daemon
 exec_always --no-startup-id udiskie &
 exec_always --no-startup-id emacs --daemon
