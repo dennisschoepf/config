@@ -1,0 +1,22 @@
+{
+  "workbench.colorTheme": "Nord",
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "window.zoomLevel": 1.8,
+  "editor.fontFamily": "'Fira Code', 'monospace', monospace, 'Droid Sans Fallback'",
+  "window.menuBarVisibility": "toggle",
+  "angular.experimental-ivy": true,
+  "editor.linkedEditing": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "prettier.tabWidth": 2,
+  "codestream.email": "d.schoepf@digital-h.de",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+}

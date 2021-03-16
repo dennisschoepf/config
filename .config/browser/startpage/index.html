@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My startpage</title>
+  <style>
+  html, body { margin: 0; height: 100%; background-color: #2E3440; font-family: 'IBM Plex Sans'; color: #ECEFF4; font-size: 24px; }
+  main { max-width: 960px; margin: 250px auto 0; padding: 0 30px; }
+  h1 { font-size: 72px; }
+  h2 { margin-top: 0; }
+  ul { margin: 0; padding: 0; list-style-type: none; }
+  a { text-decoration: none; color: #ffffff; display: flex; align-items: center; }
+  a > i { color: #88C0D0; margin-right: 8px; }
+  a > span:nth-child(2) { border-bottom: 2px solid #4C566A; }
+  a > span:nth-child(2):hover { border-bottom: 2px solid #88C0D0; }
+  #time { color: #2E3440; font-weight: bold; border-bottom: 2px solid #88C0D0; }
+  #links { margin-top: 60px; }
+  .link-groups { display: flex; flex-wrap: wrap; }
+  .link-groups > li { width: calc(28% - 2px); padding-right: 2%; margin-right: 5%; border-right: 2px solid #4C566A; }
+  .link-groups > li:last-child { margin-right: 0; border-right: 0; }
+  .link-groups > li > h2 { color: #4C566A; text-transform: uppercase; }
+  .link-group > li { margin-bottom: 8px; }
+
+   @media (min-width: 0px) and (max-width: 1023px) {
+     .link-groups > li { width: 100%; border-right: 0; margin-bottom: 60px; }
+   }
+  </style>
+  <link rel="stylesheet" type="text/css" href="remixicon.css">
+</head>
+<body>
+  <main>
+    <h1>Hello Dennis,</h1>
+    <p>It is <span id="time">00:00:00</span>. Here are your
+    important links:</p>
+    <section id="links">
+      <ul class="link-groups">
+        <li>
+          <h2>Personal</h2>
+          <ul class="link-group" id="personal">
+            <li>
+              <a href=
+              "https://www.fastmail.com/mail/Inbox/?u=b88140d0"><i class="ri-mail-open-fill">
+              </i><span>Mail</span></a>
+            </li>
+            <li>
+              <a href=
+              "https://www.dropbox.com/h"><i class=
+              "ri-dropbox-fill"></i><span>Dropbox</span></a>
+            </li>
+            <li>
+              <a href=
+              "https://github.com/dennisschoepf"><i class=
+              "ri-github-fill"></i><span>Github</span></a>
+            </li>
+            <li>
+              <a href="https://dnsc.io"><i class=
+              "ri-window-fill"></i><span>Website</span></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2>University</h2>
+          <ul class="link-group" id="university">
+            <li>
+              <a href=
+              "https://login.sbg.ac.at"><i class=
+              "ri-government-fill"></i><span>PLUS</span></a>
+            </li>
+            <li>
+              <a href=
+              "https://login.fh-salzburg.ac.at"><i class=
+              "ri-building-2-fill"></i><span>FH Salzburg</span></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2>Work</h2>
+          <ul class="link-group" id="work">
+            <li>
+              <a href=
+              "https://login.microsoftonline.com"><i class=
+              "ri-windows-fill"></i> <span>Microsoft
+              Office</span></a>
+            </li>
+            <li>
+              <a href=
+              "https://bitbucket.org/hoeferhansen"><i class=
+              "ri-git-repository-fill"></i><span>Bitbucket</span></a>
+            </li>
+            <li>
+              <a href=
+              "https://app.asana.com"><i class="ri-task-fill"></i>
+              <span>Asana</span></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    const timeContainer = document.querySelector('#time');
+
+    function updateTime() {
+      const currentTime = new Date();
+      const formattedTime = currentTime.toLocaleTimeString('de-DE');
+
+      timeContainer.innerHTML = formattedTime;
+      timeContainer.style.color = '#ECEFF4';
+    }
+
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>

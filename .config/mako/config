@@ -1,0 +1,11 @@
+max-visible=3
+font=FiraCode Nerd Font 12
+background-color=#2E3440
+text-color=#ECEFF4
+width=350
+height=125
+margin=15
+padding=20
+border-size=0
+border-radius=10
+progress-color=#88C0D0

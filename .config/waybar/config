@@ -1,0 +1,79 @@
+ {
+    "position": "top",
+    "height": 30,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": [],
+    "modules-right": ["sway/window", "tray", "network", "pulseaudio", "battery", "clock", "custom/shutdown"],
+    "sway/workspaces": {
+        "persistent_workspaces": {
+            "1": ["eDP-1"],
+            "2": ["eDP-1"],
+            "3": ["eDP-1"],
+            "4": ["DP-5"],
+            "5": ["DP-5"],
+            "6": ["DP-5"],
+            "7": ["DP-1"],
+            "8": ["DP-1"],
+            "9": ["DP-1"],
+        },
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+   "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "Europe/Berlin",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
+    },
+    "battery": {
+        "battery": "BAT0",
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{essid} ",
+        "tooltip": false
+    },
+    "custom/shutdown": {
+        "format": "",
+        "on-click": "$HOME/.config/rofi/powermenu.sh",
+        "tooltip": false
+    },
+    "cpu": {
+      "interval": 10,
+      "format": "{}% ",
+      "max-length": 10
+    }
+}
