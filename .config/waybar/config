@@ -21,8 +21,8 @@
         "format": "<span style=\"italic\">{}</span>"
     },
    "tray": {
-        "icon-size": 21,
-        "spacing": 10
+        "icon-size": 19,
+        "spacing": 15
     },
     "clock": {
         "timezone": "Europe/Berlin",
