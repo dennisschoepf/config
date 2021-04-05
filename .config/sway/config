@@ -17,26 +17,18 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 bindsym $mod+space exec $HOME/.config/rofi/launcher.sh
 bindsym $mod+Shift+w exec brave-beta
-bindsym $mod+Shift+b exec bluetooth-manager
-bindsym $mod+Shift+s exec pavucontrol
-bindsym $mod+Shift+n exec networkmanager_dmenu
 bindsym $mod+Escape exec $HOME/.config/rofi/powermenu.sh
 
 # --- AUTOSTART ---
-exec_always --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec_always --no-startup-id mako
-exec_always --no-startup-id batsignal
-exec_always --no-startup-id dropbox-cli start
-exec_always --no-startup-id blueman-applet
-exec_always --no-startup-id thunar --daemon
-exec_always --no-startup-id udiskie &
+exec_always --no-startup-id dropbox start
 exec_always --no-startup-id emacs --daemon
 
 # --- APPEARANCE ---
 # Defaults
 default_border pixel 3
 font xft:IBM Plex Mono 11
-seat seat0 xcursor_theme Breeze_Default 24
+seat seat0 xcursor_theme xcursor-breeze-snow 18
 
 # Transparency
 for_window [app_id="Alacritty"] opacity 0.95
@@ -65,15 +57,16 @@ smart_gaps on
 smart_borders on
 
 # Wallpaper
-output "*" bg $HOME/.local/share/wallpapers/yosemite.png fill
+output "*" bg $HOME/.local/share/backgrounds/yosemite.png fill
 
 # GTK
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
     gsettings set $gnome-schema gtk-theme 'Nordic-darker'
-    gsettings set $gnome-schema icon-theme 'Reversal-black-dark'
-    gsettings set $gnome-schema cursor-theme 'Breeze_Default'
+    gsettings set $gnome-schema icon-theme 'Reversal-grey-dark'
+    gsettings set $gnome-schema cursor-theme 'xcursor-breeze-snow'
+    gsettings set $gnome-schema cursor-size 18
     gsettings set $gnome-schema font-name 'IBM Plex Sans'
 }
 
