@@ -24,6 +24,9 @@ export PATH=/home/dennis/Utilities/applications/processing-3.5.4/java:$PATH
 export PATH=$PATH:~/.emacs.d/bin
 export PATH=$PATH:$HOME/.cargo/bin
 
+# Gradle
+export PATH=$PATH:/opt/gradle/gradle-7.0/bin
+
 # Android Studio
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -44,7 +47,6 @@ alias ls="ls -l"
 alias ll="exa -l --color=always --group-directories-first"
 alias la="exa -al --color=always --group-directories-first"
 alias android-studio="/opt/android-studio/bin/studio.sh"
-alias cat="bat"
 
 # Vim Mode
 bindkey -v
